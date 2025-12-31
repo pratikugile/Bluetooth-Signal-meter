@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:padding="10dp"
@@ -18,3 +19,120 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>
+=======
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discover"
+                    android:textColor="#1A1A1A"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nearby Devices"
+                    android:textColor="#757575"
+                    android:textSize="20sp" />
+
+                <!-- Search Bar -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="2dp"
+                    app:strokeWidth="0dp">
+
+                    <EditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:drawableStart="@android:drawable/ic_menu_search"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="#9E9E9E"
+                        android:hint="Search devices..."
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingHorizontal="16dp"
+                        android:textColor="#1A1A1A"
+                        android:textColorHint="#9E9E9E" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="88dp" />
+
+        <TextView
+            android:id="@+id/txtEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No devices found.\nTap 'Start Scan' to begin."
+            android:textAlignment="center"
+            android:textColor="#757575"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#212121"
+        android:text="Start Scan"
+        android:textColor="@android:color/white"
+        app:icon="@android:drawable/ic_menu_search"
+        app:iconTint="@android:color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+>>>>>>> 22e59a1 (Udate the bluetooth scan add search option)

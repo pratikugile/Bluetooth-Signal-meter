@@ -4,7 +4,11 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
+<<<<<<< HEAD
         <DropdownSelection timestamp="2025-12-16T03:19:11.401933400Z">
+=======
+        <DropdownSelection timestamp="2025-12-19T05:05:47.449886900Z">
+>>>>>>> 22e59a1 (Udate the bluetooth scan add search option)
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="PhysicalDevice" identifier="serial=f925fcc8" />
